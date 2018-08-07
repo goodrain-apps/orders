@@ -1,4 +1,4 @@
-FROM weaveworksdemos/carts:0.4.8
+FROM weaveworksdemos/orders:0.4.7
 
 # FROM weaveworksdemos/msd-java:jre-latest
 

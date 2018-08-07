@@ -1,13 +1,11 @@
-FROM weaveworksdemos/orders:0.4.7
-
-# FROM weaveworksdemos/msd-java:jre-latest
+FROM weaveworksdemos/msd-java:jre-latest
 
 WORKDIR /usr/src/app
 
-# COPY *.jar ./app.jar
+COPY *.jar ./app.jar
 
-# RUN	chown -R ${SERVICE_USER}:${SERVICE_GROUP} ./app.jar
+RUN	chown -R ${SERVICE_USER}:${SERVICE_GROUP} ./app.jar
 
-# USER ${SERVICE_USER}
+USER ${SERVICE_USER}
 
 ENTRYPOINT ["/usr/local/bin/java.sh","-jar","./app.jar", "--port=8080"]
